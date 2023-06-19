@@ -353,6 +353,8 @@
 "Assets/Scenes/Navmesh/Scripts/WallAnimation.cs"
 "Assets/Scripts/CamFollowPlayer.cs"
 "Assets/Scripts/CollectCoin.cs"
+"Assets/Scripts/Jump.cs"
+"Assets/Scripts/Opponent.cs"
 "Assets/Scripts/PlayerController.cs"
 -langversion:9.0
 

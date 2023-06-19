@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     float newX = 0;
     public float xSpeed;
     public float limitx;
+
+   
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         SwipeCheck();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (transform.position.y <=1.05f)
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.up*300);
+            }
+        }
 
     }
 
@@ -33,6 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             touchXDelta = Input.GetAxis("Mouse X");
         }
+        
         else
         {
             touchXDelta = 0;
@@ -43,4 +54,7 @@ public class PlayerController : MonoBehaviour
          Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + runningSpeed * Time.deltaTime);
          transform.position = newPosition;
     }
+    
+        
+    
 }

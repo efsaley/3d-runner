@@ -7,6 +7,9 @@ TagManager:
   - Coin
   - Collision
   - End
+  - Platform
+  - Ground
+  - SpeedBuster
   layers:
   - Default
   - TransparentFX

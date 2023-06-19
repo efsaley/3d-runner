@@ -13,6 +13,7 @@ public class CollectCoin : MonoBehaviour
     public Animator PlayerAnim;
     public GameObject Player;
     public GameObject EndPanel;
+    
 
     private void Start()
     {
@@ -55,11 +56,26 @@ public class CollectCoin : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
+    {   
         if (collision.collider.CompareTag("Collision"))
         {
-            Debug.Log("Touched Obstacle!..");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //Debug.Log("Touched Obstacle!..");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerController.runningSpeed = 0;
+            transform.Rotate(transform.rotation.x,180,transform.rotation.z, Space.Self);
+            EndPanel.SetActive(true);
+
+            
+            if(score >= maxScore)
+            {
+                //Debug.Log("You Win!..");
+                PlayerAnim.SetBool("win",true);
+            }
+            else 
+            {
+                //Debug.Log("You Lose!..");
+                PlayerAnim.SetBool("lose",true);
+            }
         }
     }
 
