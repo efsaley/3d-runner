@@ -352,10 +352,13 @@
 "Assets/Scenes/Navmesh/Scripts/ClickToMove.cs"
 "Assets/Scenes/Navmesh/Scripts/WallAnimation.cs"
 "Assets/Scripts/CamFollowPlayer.cs"
-"Assets/Scripts/CollectCoin.cs"
+"Assets/Scripts/CheckCollisions.cs"
+"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/InGameRanking.cs"
 "Assets/Scripts/Jump.cs"
 "Assets/Scripts/Opponent.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/RankingSystem.cs"
 -langversion:9.0
 
 /deterministic
